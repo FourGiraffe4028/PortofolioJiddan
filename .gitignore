@@ -1,0 +1,15 @@
+# deps
+node_modules/
+frontend/node_modules/
+# build
+frontend/build/
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# vercel
+.vercel/
+# env lokal
+.env.local
+.env.*.local
