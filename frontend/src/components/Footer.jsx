@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, Github } from "lucide-react";
 import { useApp } from "../store";
-import { NAV_IDS, EMAIL, LINKEDIN, WHATSAPP_NUMBER } from "../data";
+import { NAV_IDS, EMAIL, LINKEDIN, GITHUB, WHATSAPP_NUMBER } from "../data";
 import { scrollToId } from "../lenis";
 
 export default function Footer() {
@@ -9,6 +9,7 @@ export default function Footer() {
   const socials = [
     { icon: Mail, href: `mailto:${EMAIL}`, label: "Email", testid: "footer-email" },
     { icon: Linkedin, href: LINKEDIN, label: "LinkedIn", testid: "footer-linkedin" },
+    { icon: Github, href: GITHUB, label: "GitHub", testid: "footer-github" },
     { icon: MessageCircle, href: `https://wa.me/${WHATSAPP_NUMBER}`, label: "WhatsApp", testid: "footer-whatsapp" },
   ];
 

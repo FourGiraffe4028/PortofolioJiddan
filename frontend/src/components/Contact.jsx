@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { MessageCircle, Mail, Linkedin, MapPin, Send } from "lucide-react";
+import { MessageCircle, Mail, Linkedin, MapPin, Send, Github } from "lucide-react";
 import { useApp } from "../store";
-import { WHATSAPP_NUMBER, EMAIL, LINKEDIN, LOCATION } from "../data";
+import { WHATSAPP_NUMBER, EMAIL, LINKEDIN, GITHUB, LOCATION } from "../data";
 import { Reveal, SectionHeading } from "./Bits";
 
 export default function Contact() {
@@ -11,7 +11,8 @@ export default function Contact() {
 
   const rows = [
     { icon: Mail, label: t.contact.emailLabel, value: EMAIL, href: `mailto:${EMAIL}`, testid: "contact-email" },
-    { icon: Linkedin, label: t.contact.linkedinLabel, value: "linkedin.com/in/jiddanarmansyiah", href: LINKEDIN, testid: "contact-linkedin" },
+    { icon: Linkedin, label: t.contact.linkedinLabel, value: "linkedin.com/in/jiddanarmansiyah", href: LINKEDIN, testid: "contact-linkedin" },
+    { icon: Github, label: "GitHub", value: "github.com/FourGiraffe4028", href: GITHUB, testid: "contact-github" },
     { icon: MapPin, label: t.contact.locationLabel, value: LOCATION, href: null, testid: "contact-location" },
   ];
 

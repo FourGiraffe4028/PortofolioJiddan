@@ -1,7 +1,8 @@
-export const WHATSAPP_NUMBER = "6282149919150"; // TODO: ganti dengan nomor WhatsApp Jiddan (JA)
-export const EMAIL = "noxjms@gmail.com";
-export const LINKEDIN = "https://www.linkedin.com/in/jiddan-armansyiah/";
-export const LOCATION = "Bekasi, Jawa Barat, Indonesia";
+export const WHATSAPP_NUMBER = "6287801351421";
+export const EMAIL = "jiddanarmansyiah@gmail.com";
+export const LINKEDIN = "https://www.linkedin.com/in/jiddanarmansiyah/";
+export const GITHUB = "https://github.com/FourGiraffe4028";
+export const LOCATION = "Jawa Barat, Indonesia";
 // Kosong / tidak diset -> same-origin "/api" (mis. saat deploy di Vercel).
 export const API_URL = `${process.env.REACT_APP_BACKEND_URL || ""}/api`;
 
@@ -13,8 +14,8 @@ export const content = {
   hero: {
     greeting: "Halo, saya",
     name: "Mochammad Jiddan Armansyiah",
-    roles: ["Manajemen Informatika"],
-    sub: "Memiliki bekal di jenjang pendidikan di  Politeknik LP3I Jakarta, dengan minat pada IT Support, Developer Website, Jaringan Komputer, dan Hardware Ethusiast.",
+    roles: ["Manajemen Informatika", "IT Support", "Web Developer", "Network Administrator"],
+    sub: "Mahasiswa Manajemen Informatika (D3) Politeknik LP3I Jakarta yang adaptif dan terorganisir, dengan minat dan keahlian di bidang IT Support, Web Development, Jaringan Komputer, dan Hardware Enthusiast.",
     viewWork: "Lihat Project Saya Dikembangkan",
     downloadCv: "Unduh CV",
     scroll: "Gulir Kebawah :)",
@@ -29,9 +30,9 @@ export const content = {
   about: {
     num: "01", title: "Tentang Saya", sub: "Jembatan antara teknologi, sistem informasi, dan solusi digital.",
     paragraphs: [
-      "Saya memiliki latar belakang pendidikan di bidang Manajemen Informatika dari Politeknik LP3I Jakarta, dengan minat dan dedikasi mendalam pada bidang IT Support, Web Development, Jaringan Komputer, dan Hardware Enthusiast.",
-      "Melalui pembelajaran berbasis praktik dan aplikatif, saya terbiasa menangani troubleshooting perangkat keras & lunak, konfigurasi dan pemeliharaan jaringan komputer, serta pengembangan website yang terstruktur dan responsif. Pengalaman ini melatih pemecahan masalah teknis secara cepat dan sistematis.",
-      "Kini, saya siap membawa bekal keahlian teknis dan komitmen ini ke dunia profesional untuk berkontribusi secara optimal dalam menjaga keandalan infrastruktur TI dan menghadirkan solusi teknologi yang tepat guna.",
+      "Saya adalah mahasiswa jurusan Manajemen Informatika dari Politeknik LP3I Jakarta yang adaptif, terorganisir, dan memiliki antusiasme tinggi terhadap perkembangan teknologi baru.",
+      "Memiliki kemampuan perencanaan yang kuat serta terbiasa berkolaborasi dalam tim untuk menyelesaikan proyek secara efektif. Didukung pengalaman praktis di bidang IT Support, instalasi & konfigurasi jaringan komputer, perakitan hardware, serta pengembangan aplikasi berbasis web.",
+      "Saya siap berkontribusi positif dan profesional dalam lingkungan kerja yang dinamis untuk mendukung keandalan sistem informasi dan infrastruktur TI.",
     ],
     infoTitle: "Sekilas tentang saya",
     info: [
@@ -354,15 +355,20 @@ export const content = {
     ],
   },
   achievements: {
-    num: "07", title: "Prestasi & Sertifikat", sub: "Apresiasi di sepanjang perjalanan.",
+    num: "07",
+    title: "Sertifikasi Kompetensi",
+    sub: "Pengakuan kompetensi profesi resmi dari Badan Nasional Sertifikasi Profesi (BNSP).",
     items: [
-      { title: "Student with Highest Achievement Index", issuer: "Politeknik Negeri Malang", year: "Semester Ganjil 2023/2024" },
-      { title: "Student with Highest Achievement Index", issuer: "Politeknik Negeri Malang", year: "Semester Ganjil 2022/2023" },
-      { title: "Most Creative Promotion — TikTok Video Competition", issuer: "Arrayan Executive Village, Batu", year: "2023" },
-      { title: "2nd Best Business Plan Idea", issuer: "Pre-Study Department of Business Administration", year: "2022" },
-      { title: "IISMA Webinar with Edupact", issuer: "Peserta Webinar", year: "20 Januari 2024" },
-      { title: "Workshop — Stronger Spine & Better Posture: Relieve Neck & Back Pain Through Pilates", issuer: "Daniel Choi · Pilates Instructor at Active by FeelFit, FeelFit Journey", year: "29 November 2025" },
-      { title: "Workshop — Corrective Pilates Masterclass", issuer: "Daniel Choi · Pilates Instructor at Active by FeelFit, FeelFit Journey", year: "25 April 2026" },
+      {
+        title: "Database Administrator",
+        issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+        year: "2026",
+      },
+      {
+        title: "Tenaga Operator Komputer",
+        issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+        year: "2025",
+      },
     ],
   },
   contact: {
