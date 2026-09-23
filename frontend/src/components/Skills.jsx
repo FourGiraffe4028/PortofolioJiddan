@@ -1,111 +1,114 @@
 import { motion } from "framer-motion";
-import { Briefcase, Languages, PenLine, Mic, CalendarCheck, ClipboardList, Boxes, Wrench } from "lucide-react";
 import { useApp } from "../store";
-import { Reveal, SectionHeading } from "./Bits";
-
-const icons = {
-  briefcase: Briefcase,
-  languages: Languages,
-  pen: PenLine,
-  mic: Mic,
-  calendar: CalendarCheck,
-  clipboard: ClipboardList,
-  boxes: Boxes,
-};
+import { Reveal } from "./Bits";
+import SukicchuunoAsciiBackground from "./SukicchuunoAsciiBackground";
 
 export default function Skills() {
   const { t } = useApp();
+  const skills = t.skills;
+
   return (
-    <section id="skills" data-testid="skills-section" className="bg-[var(--bg-alt)] px-6 py-24 md:px-12 md:py-32 lg:px-20">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading num={t.skills.num} title={t.skills.title} sub={t.skills.sub} />
+    <section
+      id="skills"
+      data-testid="skills-section"
+      className="relative bg-[var(--bg-alt)] px-6 py-16 md:px-12 md:py-20 lg:px-20 overflow-hidden"
+    >
+      {/* Hakos Baelz - Sukicchuuno Colored ASCII Background Animation */}
+      <SukicchuunoAsciiBackground />
 
-        <div className="grid gap-12 lg:grid-cols-[45%_55%]">
+      <div className="relative z-10 mx-auto max-w-6xl">
+        {/* Main Container Card: Transparent Liquid Glass allowing full video visibility */}
+        <div className="rounded-3xl border border-white/15 bg-black/25 p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] backdrop-blur-[2px] sm:p-12 lg:p-16">
+          
+          {/* Header Area */}
           <div>
             <Reveal>
-              <h3 className="font-display text-xl italic text-[var(--rose)]">{t.skills.langTitle}</h3>
-            </Reveal>
-            <div className="mt-6 space-y-8">
-              {t.skills.languages.map((l, li) => (
-                <Reveal key={l.name} delay={0.08 * li}>
-                  <div className="rounded-3xl border border-[var(--line)] bg-[var(--surface)] p-6 shadow-sm" data-testid={`skill-lang-${li}`}>
-                    <div className="flex items-baseline justify-between">
-                      <span className="font-num text-lg text-[var(--ink)]">{l.name}</span>
-                      <span className="font-num text-sm text-[var(--rose)]">{l.pct}%</span>
-                    </div>
-                    <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-[var(--bg-alt)]">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${l.pct}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="h-full rounded-full bg-gradient-to-r from-[var(--rose)] via-[var(--pink)] to-[var(--gold)]"
-                      />
-                    </div>
-                    <p className="mt-2.5 text-xs italic text-[var(--muted)]">{l.note}</p>
-                    {l.aspects.length > 0 && (
-                      <div className="mt-3 flex flex-wrap gap-1.5">
-                        {l.aspects.map((a) => (
-                          <span key={a} className="rounded-full border border-[var(--line)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
-                            {a}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal delay={0.15}>
-              <h3 className="font-display mt-10 text-xl italic text-[var(--rose)]">{t.skills.softTitle}</h3>
-              <div className="mt-4 flex flex-wrap gap-2" data-testid="skill-soft">
-                {t.skills.soft.map((s) => (
-                  <span key={s} className="chip !px-4 !py-2 !text-xs">{s}</span>
-                ))}
+              <div className="mb-3 flex items-center gap-3">
+                <span className="font-num text-xs tracking-[0.35em] text-[var(--gold)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                  {skills.num}
+                </span>
+                <span className="h-px w-12 bg-[var(--gold)]/80" />
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <h3 className="font-display mt-10 flex items-center gap-2 text-xl italic text-[var(--rose)]">
-                <Wrench size={17} /> {t.skills.toolsTitle}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2" data-testid="skill-tools">
-                {t.skills.tools.map((tool) => (
-                  <span key={tool} className="rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-xs font-semibold text-[var(--ink)]">
-                    {tool}
-                  </span>
-                ))}
-              </div>
+            <Reveal delay={0.08}>
+              <h2 className="font-display text-3xl font-bold tracking-tight text-[var(--ink)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] sm:text-4xl lg:text-5xl">
+                {skills.title}
+              </h2>
             </Reveal>
+
+            {skills.sub && (
+              <Reveal delay={0.14}>
+                <p className="mt-3 max-w-2xl text-sm font-normal text-[var(--ink)]/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] sm:text-base">
+                  {skills.sub}
+                </p>
+              </Reveal>
+            )}
           </div>
 
-          <div>
-            <Reveal>
-              <h3 className="font-display text-xl italic text-[var(--rose)]">{t.skills.profTitle}</h3>
-            </Reveal>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {t.skills.professional.map((p, i) => {
-                const Icon = icons[p.icon];
-                return (
-                  <motion.div
-                    key={p.label}
-                    initial={{ opacity: 0, y: 34 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.55, delay: (i % 2) * 0.08 }}
-                    className="card-lift flex items-center gap-4 rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 shadow-sm"
-                    data-testid={`skill-prof-${i}`}
-                  >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--rose)] to-[var(--pink)] text-[#191715] shadow-sm">
-                      <Icon size={19} className="stroke-[2.2]" />
-                    </span>
-                    <span className="text-sm font-semibold leading-snug text-[var(--ink)]">{p.label}</span>
-                  </motion.div>
-                );
-              })}
+          {/* Horizontal Line under Title */}
+          <Reveal delay={0.18}>
+            <div className="my-8 h-[2px] w-full bg-white/20 sm:my-10" />
+          </Reveal>
+
+          {/* Two-Column Layout: Hard Skill vs Soft Skill */}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
+            
+            {/* Left Column: Hard Skill */}
+            <div className="lg:pr-12 xl:pr-16" data-testid="hard-skills-list">
+              <Reveal delay={0.22}>
+                <h3 className="font-display inline-block border-b-2 border-[var(--rose)] pb-1 text-2xl font-bold tracking-wide text-[var(--ink)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] sm:text-3xl">
+                  {skills.hardTitle}
+                </h3>
+              </Reveal>
+
+              <ul className="mt-8 space-y-4">
+                {skills.hardSkills.map((skill, i) => (
+                  <Reveal key={skill} delay={0.25 + i * 0.04}>
+                    <li
+                      data-testid={`hard-skill-item-${i}`}
+                      className="group flex items-start gap-3.5 transition-transform duration-200 hover:translate-x-1.5"
+                    >
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold)] shadow-[0_0_6px_var(--gold)] transition-transform duration-200 group-hover:scale-150" />
+                      <span className="text-base font-medium leading-relaxed text-[var(--ink)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] transition-colors duration-200 group-hover:text-[var(--gold)] sm:text-lg">
+                        {skill}
+                      </span>
+                    </li>
+                  </Reveal>
+                ))}
+              </ul>
             </div>
+
+            {/* Right Column: Soft Skill (separated by vertical divider on lg) */}
+            <div
+              className="border-t border-white/15 pt-10 lg:border-l lg:border-t-0 lg:border-white/15 lg:pl-12 lg:pt-0 xl:pl-16"
+              data-testid="soft-skills-list"
+            >
+              <Reveal delay={0.22}>
+                <h3 className="font-display inline-block border-b-2 border-[var(--rose)] pb-1 text-2xl font-bold tracking-wide text-[var(--ink)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] sm:text-3xl">
+                  {skills.softTitle}
+                </h3>
+              </Reveal>
+
+              <ul className="mt-8 space-y-4">
+                {skills.softSkills.map((skill, i) => (
+                  <Reveal key={skill} delay={0.25 + i * 0.04}>
+                    <li
+                      data-testid={`soft-skill-item-${i}`}
+                      className="group flex items-start gap-3.5 transition-transform duration-200 hover:translate-x-1.5"
+                    >
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold)] shadow-[0_0_6px_var(--gold)] transition-transform duration-200 group-hover:scale-150" />
+                      <span className="text-base font-medium leading-relaxed text-[var(--ink)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)] transition-colors duration-200 group-hover:text-[var(--gold)] sm:text-lg">
+                        {skill}
+                      </span>
+                    </li>
+                  </Reveal>
+                ))}
+              </ul>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

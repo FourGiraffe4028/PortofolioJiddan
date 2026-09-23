@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, ChevronLeft, ChevronRight, X, Heart } from "lucide-react";
+import { Award, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useApp } from "../store";
 import { Reveal, SectionHeading } from "./Bits";
 
@@ -67,22 +67,6 @@ export default function Achievements() {
             >
               <ChevronRight size={18} />
             </button>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.15}>
-          <div className="mt-14">
-            <h3 className="font-display flex items-center gap-2 text-xl italic text-[var(--rose)]">
-              <Heart size={17} /> {t.achievements.volunteeringTitle}
-            </h3>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {t.achievements.volunteering.map((v, i) => (
-                <div key={v.title} className="card-lift rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 shadow-sm" data-testid={`volunteering-${i}`}>
-                  <span className="font-num text-xs text-[var(--gold)]">{v.year}</span>
-                  <p className="mt-1.5 text-sm font-semibold text-[var(--ink)]">{v.title}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </Reveal>
       </div>
