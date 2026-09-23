@@ -20,7 +20,7 @@ export const content = {
     downloadCv: "Unduh CV",
     scroll: "Gulir Kebawah :)",
     portraitAlt: "Potret Mochammad Jiddan Armansyiah (JA)",
-    portraitNote: "Foto profesional — segera hadir",
+    portraitNote: "Foto profesional segera hadir",
     cards: [
       { icon: "grad", title: "Lulus 2027", sub: "Politeknik LP3I Jakarta" },
       { icon: "globe", title: "Lulus 2024", sub: "SMK Tel. Telesandi Bekasi" },
@@ -373,9 +373,9 @@ export const content = {
   },
   contact: {
     num: "08", title: "Terbuka untuk kolaborasi, peluang kerja, atau diskusi santai.",
-    sub: "Terbuka untuk peran entry-level di bidang IT Support, Web Development, Administrasi Jaringan & Server, serta Teknisi Hardware — atau sekadar berdiskusi santai seputar teknologi.",
+    sub: "Terbuka untuk peran entry-level di bidang IT Support, Web Development, Administrasi Jaringan & Server, serta Teknisi Hardware atau sekadar berdiskusi santai seputar teknologi.",
     whatsappTitle: "Chat via WhatsApp",
-    whatsappSub: "Cara tercepat menghubungi saya — biasanya dibalas dalam sehari.",
+    whatsappSub: "Cara tercepat menghubungi saya biasanya dibalas dalam sehari.",
     quickLabel: "Tulis pesan singkat (opsional)",
     quickPlaceholder: "Halo Jiddan, saya melihat portofoliomu dan…",
     send: "Buka WhatsApp",
