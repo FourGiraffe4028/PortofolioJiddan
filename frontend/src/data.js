@@ -77,9 +77,9 @@ export const content = {
         image: "/assets/smpit-mutiara-hikmah.jpg",
         bullets: [
           "Menyelesaikan jenjang pendidikan menengah pertama dengan fondasi akademik yang kuat dan pembentukan karakter disiplin.",
-          "Mempelajari dasar-dasar teknologi informasi, pengenalan aplikasi komputer, serta aktif dalam kegiatan kepemimpinan dan organisasi sekolah.",
+          "Mempelajari dasar-dasar dalam agama islam dan juga akademik seperti belajar al quran dan hadist di sekolah.",
         ],
-        tags: ["Pendidikan Menengah Pertama", "Dasar Komputer & TI", "Pengembangan Karakter"],
+        tags: ["Pendidikan Menengah Pertama", "Akidah Akhlak", "Pengembangan Karakter"],
       },
     ],
   },
@@ -229,6 +229,22 @@ export const content = {
     pending: "Berhasil dirakit, diuji, dan aktif beroperasi",
     items: [
       {
+        id: "service-hardware-gadget",
+        cat: "hardware",
+        title: "Service & Maintenance Hardware (Laptop, PC & Smartphone)",
+        desc: "Layanan teknis hardware personal mencakup upgrade SSD & RAM laptop, deep cleaning & repasting thermal, instalasi OS, serta reparasi smartphone (penggantian LCD, konektor charger, dan housing frame).",
+        background: "Aktivitas freelance teknis dan pemeliharaan hardware personal yang dikerjakan untuk rekanan, kerabat, dan kenalan terdekat di waktu luang sebagai sarana mengasah keahlian teknisi sekaligus memperoleh penghasilan tambahan.",
+        role: "1. Laptop & Komputer: Upgrade storage (HDD ke SSD SATA/NVMe), penambahan & upgrade RAM, deep cleaning debu kipas & repasting thermal paste, instalasi sistem operasi Windows 11, serta backup dan migrasi data antarlaptop.\n2. Smartphone: Pembongkaran presisi, reparasi & penggantian modul LCD touchscreen, perbaikan konektor charger (charging port/board), penggantian frame/housing bodi, serta quality control fungsionalitas komponen.",
+        outcome: "Berhasil merestorasi dan mempercepat performa operasional puluhan unit laptop menjadi responsif (kecepatan SSD ~550 MB/s), menjaga stabilitas suhu mesin, serta mengembalikan fungsionalitas penuh unit smartphone yang mengalami kerusakan layar, port pengisian daya, atau kerusakan fisik bodi.",
+        image: "/assets/service-laptop-disassembly.jpg",
+        images: [
+          { src: "/assets/service-laptop-disassembly.jpg", label: "Proses Pembongkaran, Cleaning & Pemeriksaan Jalur Board Laptop" },
+          { src: "/assets/service-laptop-ssd.jpg", label: "Upgrade SSD Crucial BX500 & Uji Benchmark CrystalDiskMark" },
+          { src: "/assets/service-laptop-lenovo.jpg", label: "Instalasi OS Windows 11 & Pengujian Stabilitas Unit Pasca-Service" },
+          { src: "/assets/service-laptop-transfer.jpg", label: "Migrasi Data, Sinkronisasi Berkas & Setup Multi-Laptop" },
+        ],
+      },
+      {
         id: "orange-pi-5",
         cat: "hardware",
         title: "Membuat Mini PC dengan Orange Pi 5",
@@ -258,6 +274,22 @@ export const content = {
         ],
       },
       {
+        id: "smart-masjid-digital",
+        cat: "iot",
+        title: "Penelitian & Penerapan Aplikasi Teknologi Digital Smart Masjid",
+        desc: "Proyek riset dan implementasi sistem digitalisasi masjid pintar (Smart Masjid) terintegrasi untuk modernisasi fasilitas dan otomasi informasi ibadah berbasis teknologi digital.",
+        background: "Penelitian ini dirancang untuk mentransformasi operasional dan sarana prasarana masjid konvensional menuju ekosistem digital cerdas (Smart Masjid), guna memudahkan otomasi penjadwalan, efisiensi energi, dan keterbukaan informasi bagi pengurus serta jamaah.",
+        role: "Supporting Team dalam Proyek Riset: Bertanggung jawab atas dokumentasi fotografi teknis dan visualisasi sistem, perancangan & penyusunan Manual Book (Buku Panduan Penggunaan Sistem untuk Pengurus/Admin), pendampingan uji coba fungsionalitas aplikasi, serta asistensi teknis saat demonstrasi implementasi sistem.",
+        outcome: "Manual Book panduan operasional berhasil disusun secara komprehensif dan mudah diimplementasikan oleh pengurus, dokumentasi fotografi dan visual riset tersaji secara profesional, serta demonstrasi aplikasi teknologi Smart Masjid berhasil dipublikasikan dan didokumentasikan dalam video luaran penelitian.",
+        image: "/assets/smart-masjid.jpg",
+        video: "https://www.youtube.com/watch?v=pz9fnnAL-Yg&t=326s",
+        youtubeId: "pz9fnnAL-Yg",
+        youtubeStart: 326,
+        images: [
+          { src: "/assets/smart-masjid.jpg", label: "Video Dokumentasi & Demonstrasi: Teknologi Digital Smart Masjid" },
+        ],
+      },
+      {
         id: "apotek-berkat-figma",
         cat: "uiux",
         title: "Desain UI/UX Aplikasi Apotek Online 'Apotek Berkat' (Figma)",
@@ -277,9 +309,9 @@ export const content = {
         id: "pos-market-system",
         cat: "web",
         title: "Pembuatan Website Aplikasi Point of Sale (POS) Market",
-        desc: "Aplikasi sistem kasir dan manajemen penjualan retail berbasis web (CodeIgniter 4) yang dilengkapi fitur multi-role (Kasir, Admin, Owner), input scanner barcode, dual display customer screen, dan pelaporan keuangan real-time.",
+        desc: "Aplikasi sistem kasir dan manajemen penjualan retail berbasis web (CodeIgniter 4) yang dilengkapi fitur multi-role (Kasir, Admin, Owner, Inventory), input scanner barcode, dual display customer screen, dan pelaporan keuangan real-time.",
         background: "Proyek ini dikembangkan untuk mendigitalisasi operasional kasir dan manajemen toko retail secara terpadu, mempercepat proses checkout belanja pelanggan, serta mengotomatisasi pencatatan arus kas dan stok barang agar terhindar dari selisih pembukuan manual.",
-        role: "Pengembangan full-stack web menggunakan PHP CodeIgniter 4 dan MySQL: perancangan skema database relasional, antarmuka responsif role-based (Kasir, Administrator, Owner), integrasi pencarian & scanner barcode produk, sistem keranjang belanja dengan kalkulasi otomatis nominal bayar dan kembalian, fitur Layar Customer (Dual Display), dashboard analitik grafik penjualan bulanan & distribusi kategori (Chart.js), serta modul rekapitulasi Laporan Keuangan & Operasional dengan filter rentang tanggal, pencatatan retur customer, dan cetak laporan.",
+        role: "Pengembangan full-stack web menggunakan PHP CodeIgniter 4 dan MySQL: perancangan skema database relasional, antarmuka responsif role-based (Kasir, Administrator, Owner, Inventory, SuperVisor), integrasi pencarian & scanner barcode produk, sistem keranjang belanja dengan kalkulasi otomatis nominal bayar dan kembalian, fitur Layar Customer (Dual Display), dashboard analitik grafik penjualan bulanan & distribusi kategori (Chart.js), serta modul rekapitulasi Laporan Keuangan & Operasional dengan filter rentang tanggal, pencatatan retur customer, dan cetak laporan.",
         outcome: "Aplikasi POS Market berhasil diimplementasikan dan berjalan stabil pada environment server lokal (localhost:8080). Transaksi kasir dapat diselesaikan dalam hitungan detik dengan pemotongan stok otomatis, pemisahan hak akses multi-role terisolasi dengan aman, serta rekapitulasi laba kotor dan omzet tersaji secara akurat dan siap dicetak.",
         image: "/assets/pos-kasir.png",
         images: [
@@ -307,7 +339,7 @@ export const content = {
       {
         id: "mikrotik-winserver-2019",
         cat: "hardware",
-        title: "Konfigurasi Jaringan MikroTik & Windows Server 2019",
+        title: "Konfigurasi Jaringan MikroTik & Windows Server 2019 Berkelompok",
         desc: "Implementasi infrastruktur jaringan terintegrasi menggunakan Router MikroTik dan sistem operasi Windows Server 2019, mencakup manajemen routing, firewall NAT, DHCP & DNS server, Active Directory, serta konfigurasi domain client-server.",
         background: "Dirancang sebagai solusi infrastruktur jaringan perusahaan dan institusi untuk sentralisasi otentikasi pengguna, manajemen keamanan perimeter jaringan, alokasi bandwidth terstruktur, serta keandalan layanan server lokal.",
         role: "Instalasi dan konfigurasi sistem operasi Windows Server 2019, konfigurasi routerboard MikroTik (IP addressing, routing, NAT, firewall filtering, bandwidth queue), setup Active Directory Domain Services (AD DS), DNS Server, DHCP Server, serta pengujian konektivitas client-server.",
